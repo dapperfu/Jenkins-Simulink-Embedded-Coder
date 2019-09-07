@@ -6,5 +6,10 @@ pipeline {
         bat(script: 'build.bat', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
       }
     }
+    stage('Artifacts') {
+      steps {
+        archiveArtifacts(caseSensitive: true, fingerprint: true, artifacts: 'output.log')
+      }
+    }
   }
 }
