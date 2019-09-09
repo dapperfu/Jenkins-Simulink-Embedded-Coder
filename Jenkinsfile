@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat(script: 'build.bat', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
-        bat 'matlab_launch.bat'
+        bat(script: 'build.bat', encoding: 'UTF-8')
       }
     }
     stage('Artifacts') {
