@@ -2,17 +2,9 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      parallel {
-        stage('Build') {
-          steps {
-            bat(script: 'build.bat', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
-          }
-        }
-        stage('') {
-          steps {
-            sh 'build.bat'
-          }
-        }
+      steps {
+        bat(script: 'build.bat', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
+        bat 'matlab_launch.bat'
       }
     }
     stage('Artifacts') {
