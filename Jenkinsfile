@@ -2,8 +2,17 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        bat(script: 'build.bat', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
+      parallel {
+        stage('Build') {
+          steps {
+            bat(script: 'build.bat', encoding: 'UTF-8', returnStatus: true, returnStdout: true)
+          }
+        }
+        stage('') {
+          steps {
+            sh 'build.bat'
+          }
+        }
       }
     }
     stage('Artifacts') {
