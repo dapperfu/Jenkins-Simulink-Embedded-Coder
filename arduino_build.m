@@ -14,3 +14,5 @@ slbuild(model);
 % dialog prompt that pauses the build process.
 save_system(hdl);
 close_system(hdl, 0);
+% Close out Models.
+bdclose('all');
