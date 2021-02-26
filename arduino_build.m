@@ -12,7 +12,7 @@ slbuild(model);
 % Save the system and close it.
 % Saves are not pushed back to the version control but it eliminates a
 % dialog prompt that pauses the build process.
-save_system(hdl);
-close_system(hdl, 0);
+save_system(model);
+close_system(model, 1);
 % Close out Models.
 bdclose('all');
