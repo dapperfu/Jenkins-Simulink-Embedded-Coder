@@ -15,6 +15,8 @@ Centralizing Embedded Coder builds to a single machine has a number of benefits.
 
 ![](https://imgs.xkcd.com/comics/compiling.png)
 
+{This examples uses Jenkins, but the same concepts will apply to any CI/CD tool such as GitLab runner}
+
 # Jenkins Pipeline View
 
 
