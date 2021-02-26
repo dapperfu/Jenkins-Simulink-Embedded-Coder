@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('Artifacts') {
+    stage('Artifact Management') {
       parallel {
-        stage('Artifacts') {
+        stage('Archive Binaries') {
           steps {
             archiveArtifacts(caseSensitive: true, fingerprint: true, artifacts: '*.elf, *.hex', allowEmptyArchive: true)
           }
