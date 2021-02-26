@@ -3,13 +3,15 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat(script: 'build.bat', encoding: 'UTF-8')
+        runMATLABCommand 'run(\'arduino_build\')'
       }
     }
+
     stage('Artifacts') {
       steps {
         archiveArtifacts(caseSensitive: true, fingerprint: true, artifacts: 'output.log')
       }
     }
+
   }
 }
