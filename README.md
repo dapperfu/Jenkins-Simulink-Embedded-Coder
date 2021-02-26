@@ -5,7 +5,7 @@
 
 ### *Jenkins + Simulink Embedded Coder = CI/CD for Model Based Development.*
 
-This repository is a working proof-of-concept example on how to use Jenkins in your Simulink Embedded Coder build process. Model Based Design and Automotive tend to lag other industries in adoption of new processes however CI/CD has been used successfully in 'traditional' devoplment for some time:
+This repository is a working proof-of-concept example on how to use Jenkins in your Simulink Embedded Coder build process. Model Based Design and Automotive tend to lag other industries in adoption of new processes however CI/CD has been used successfully in 'traditional' development for some time:
 
 > Continuous Integration (CI) allows you to continuously integrate code into a single shared and easy to access repository. ... CI/CD creates a fast and effective process of getting your product to market before your competition as well as releasing new features and bug fixes to keep your current customers happy.
 >
@@ -21,5 +21,10 @@ Centralizing Embedded Coder builds to a single machine has a number of benefits.
 
 # Jenkins Pipeline View
 
+![](Jenkins_pipeline_view.png) 
 
 # Jenkins Artifacts
+
+The artifacts are archived under the artifacts tab. The `Jenkinsfile` is configured to archive both binary files (`*.elf`, `*.hex`) in addition to the contents of the `*_ert_rtw/` folder.
+
+![](Jenkins_artifacts.png)
